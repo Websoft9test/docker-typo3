@@ -1,5 +1,4 @@
-# image:  https://hub.docker.com/r/martinhelmich/typo3
-# compose file: https://github.com/martin-helmich/docker-typo3/blob/master/11.5/docker-compose.yml
+# image and compose: https://hub.docker.com/r/martinhelmich/typo3
 
 version: '3.8'
 
@@ -10,7 +9,10 @@ services:
     ports:
       - ${APP_PORT}:80
     volumes:
-      - typo3:/var/www/html
+      - typo3fileadmin:/var/www/html/fileadmin
+      - typo3conf:/var/www/html/typo3conf
+      - typo3uploads:/var/www/html/uploads
+      - typo3temp:/var/www/html/typo3temp
     restart: always
 
   mysql:
@@ -33,7 +35,8 @@ networks:
       name: ${APP_NAME}
 
 volumes:
-  typo3:
-    driver: local
+  typo3fileadmin:
+  typo3conf:
+  typo3uploads:
+  typo3temp:
   mysql:
-    driver: local
