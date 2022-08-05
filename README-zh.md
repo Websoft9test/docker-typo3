@@ -16,8 +16,8 @@
 * **公有云**: AWS, Azure, Google Cloud, 阿里云, 腾讯云, 华为云等20多个全球主流云
 * **私有云**: KVM, VMware, VirtualBox, OpenStack 等主流虚拟化架构
 * **CPU架构**: Linux x86-64, ARM 32/64, x86/i686
-* **内存**: 2GB以上
-* **CPU**: 1核以上
+* **内存**: 4GB以上
+* **CPU**: 2核以上
 * **存储**: 20GB以上
 * **Swap分区**: 2GB以上
 * **带宽**: 100M以上体验更流畅
