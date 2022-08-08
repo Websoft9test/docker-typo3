@@ -14,7 +14,11 @@ services:
       - typo3uploads:/var/www/html/uploads
       - typo3temp:/var/www/html/typo3temp
     restart: always
-
+    environment:
+      TYPO3_DB_USER: ${DB_MYSQL_USER}
+      TYPO3_DB_PASSWORD: ${DB_MYSQL_PASSWORD}
+      TYPO3_DB_HOST: mysql
+      
   mysql:
     image: mysql:${DB_MYSQL_VERSION}
     container_name: ${APP_NAME}-db
