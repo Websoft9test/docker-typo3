@@ -1,6 +1,7 @@
 #!/bin/bash
 # customrized cmd powered by Websoft9
 
+echo $TYPO3_DB_USER
 if [[ -f /var/www/html/wizard ]]; then
     echo "Initialization has been completed before this time!"
 else
