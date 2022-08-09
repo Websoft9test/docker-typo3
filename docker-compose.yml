@@ -18,7 +18,7 @@ services:
       TYPO3_DB_USER: ${DB_MYSQL_USER}
       TYPO3_DB_PASSWORD: ${DB_MYSQL_PASSWORD}
       TYPO3_DB_HOST: mysql
-    command: bash -c "cat /my_cmd > cmd.sh && chmod +x /cmd.sh && /cmd.sh"
+    command: bash -c "cat /my_cmd > /cmd.sh && chmod +x /cmd.sh && /cmd.sh"
     configs:
       - source: my_cmd
       
